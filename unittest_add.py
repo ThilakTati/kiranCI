@@ -1,10 +1,11 @@
 import unittest
-from add import add
+from addprog import arith
 
-
-class SimplisticTest(unittest.TestCase):
-
+class testarithmetic(unittest.TestCase):
+    def setUp(self):
+        self.test_arith = arith()
     def test_add(self):
-            self.assertTrue(add(4,5),9)
+        self.assertEqual(10, self.test_arith.add(1,9))
+
 if __name__ == '__main__':
      unittest.main()
